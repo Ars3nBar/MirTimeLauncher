@@ -1,4 +1,4 @@
-name: Build MirTimeLauncher EXE
+name: Build MirTimeLauncher & Installer
 on: [push]
 jobs:
   build-windows:
@@ -10,7 +10,13 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements.txt
       - run: pyinstaller --noconfirm --onefile --windowed --name "MirTimeLauncher" --collect-all customtkinter launcher.py
+      - name: Build Windows Installer (Inno Setup)
+        run: |
+          choco install innosetup -y
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
       - uses: actions/upload-artifact@v4
         with:
-          name: MirTimeLauncher-Windows
-          path: dist/MirTimeLauncher.exe
+          name: MirTimeLauncher-Installer-and-EXE
+          path: |
+            dist/MirTimeLauncher-Setup.exe
+            dist/MirTimeLauncher.exe
