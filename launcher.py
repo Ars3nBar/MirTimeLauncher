@@ -20,10 +20,10 @@ SERVERS = {
 }
 
 LINKS = {
-    "site": "https://mir-time.ru",
-    "tg": "https://t.me",
-    "vk": "https://vk.ru",
-    "ds": "https://discord.gg"
+    "site": "https://don.mir-time.ru",
+    "tg": "https://t.me/mirtime_minecraft",
+    "vk": "https://vk.ru/club241998844",
+    "ds": "https://discord.gg/4c2ag4cwQU"
 }
 
 LOGO_URL = "https://easydonate.ru"
