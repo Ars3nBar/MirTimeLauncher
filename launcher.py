@@ -26,7 +26,7 @@ LINKS = {
     "ds": "https://discord.gg/4c2ag4cwQU"
 }
 
-LOGO_URL = "https://easydonate.ru"
+LOGO_URL = "https://cdn.easydonate.ru/images/logos/51/f9/51f99e29b0c19282f2240918ac7747e26f03691620a260b19539bf71645d92ec.png"
 
 BASE_DIR = os.path.join(os.getenv("APPDATA"), ".mirtime")
 CONFIG_PATH = os.path.join(BASE_DIR, "launcher_config.json")
